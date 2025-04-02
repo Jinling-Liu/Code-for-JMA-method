@@ -85,8 +85,8 @@ for i_m=1:N
     V_plot3(i_m,:)=[diag(V_p3(1:5,:))' diag(V_p3(6:10,:))' diag(V_p3(11:15,:))' diag(V_p3(16:20,:))' diag(V_p3(21:25,:))'];
 end
 
-load('M_plot3.mat')
-load('V_plot3.mat')
+
+%=================subplot for M=======================================
 
 label_plot0=[1:25];
 label_plot1=reshape(label_plot0,5,5);
@@ -106,6 +106,7 @@ for s_b=1:d^2
     plot([M_r(label_plot(s_b)) M_r(label_plot(s_b))], [0 8],'g-*');
 end
 
+%=================subplot for V=======================================
 
 M_r=reshape(M,1,d^2);
 for s_b=1:d^2
@@ -122,12 +123,7 @@ for s_b=1:d^2
     plot([M_r(s_b) M_r(s_b)], [0 1],'g-*');
 end
 
-save('M_plot1.mat','M_plot1')
-save('V_plot1.mat','V_plot1')
-save('M_plot2.mat','M_plot2')
-save('V_plot2.mat','V_plot2')
-save('M_plot3.mat','M_plot3')
-save('V_plot3.mat','V_plot3')
+
 
 
 
